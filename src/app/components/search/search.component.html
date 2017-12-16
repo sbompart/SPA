@@ -1,4 +1,9 @@
-<h1>Héroes de <small>Marvel y DC</small></h1>
+<h1>Buscando: <small>{{ termino }}</small></h1>
+
+<div class="alert alert-danger" role="alert" *ngIf="heroes.length == 0">
+  No hay Heroes para la busqueda!
+</div>
+
 <div class="card-columns animated fadeIn">
 
   <div class="card" *ngFor="let heroe of heroes; let i = index">
